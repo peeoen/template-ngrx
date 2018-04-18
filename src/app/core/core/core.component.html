@@ -1,0 +1,11 @@
+<div *ngFor="let book of (books$ | async)">
+  <span>{{book.title}} : {{book.unit}} </span> 
+  <span>
+    <button (click)="add(book)">Add</button>
+    <button (click)="remove(book)">Remove</button>
+  </span>
+</div>
+
+<div>
+  <button (click)="removeAll()">Remove All</button>
+</div>

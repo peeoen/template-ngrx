@@ -1,19 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './counter';
-
 import { AppComponent } from './app.component';
 
+import { FeatureModule } from './core/store/index';
+import { CoreComponent } from './core/core/core.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CoreComponent
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({ count: counterReducer })
+    FeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]
